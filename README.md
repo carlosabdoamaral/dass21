@@ -58,4 +58,9 @@ To generate a analysis, you should follow the step by step gived by the sonarqub
 ---
 
 ### Prometheus
-It is used in this project only for grafana access to the database 
+It is used in this project only for grafana access to the database
+
+---
+
+### Swagger
+The application swagger can be found in the url http://localhost:8080/swagger-ui/index.html#/
