@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="AdditionalModuleElements">
-    <content url="file://$MODULE_DIR$" dumb="true">
-      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/8/e" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/9" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/f/6" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/securityhotspotstore/8/e" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/securityhotspotstore/9" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/securityhotspotstore/f/6" />
-    </content>
-  </component>
-  <component name="FacetManager">
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping>
-          <factory-entry name="entityManagerFactory" value="90428105-e457-4d8e-babd-82ab2f2e3d26" />
-        </datasource-mapping>
-        <naming-strategy-map />
-      </configuration>
-    </facet>
-  </component>
   <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="ee987874-77de-4a5f-9ea7-19179e98a5f8" />
+    <option name="uniqueId" value="11dce610-7c62-4459-9711-dd21f06af743" />
   </component>
 </module>
