@@ -1,24 +1,0 @@
-
-x
-java:S1104"VMake respostaId a static final constant or non-public and provide accessors if needed.(éší‡ûÿÿÿÿ8Ô²Æ1
-w
-java:S1104"ZMake participanteId a static final constant or non-public and provide accessors if needed.(›§Îç8¶²Æ1
-n
-java:S1104"QMake idade a static final constant or non-public and provide accessors if needed.(·»¡²8È“¯§Æ1
-o
-java:S1104	"RMake genero a static final constant or non-public and provide accessors if needed.(ôøğ‘8È“¯§Æ1
-u
-java:S1104
-"XMake dataResposta a static final constant or non-public and provide accessors if needed.(´‹ê„8Ÿ¶²Æ1
-…
-java:S1104"cMake pontuacaoTotalAnsiedade a static final constant or non-public and provide accessors if needed.(¤²ïøÿÿÿÿ8Ÿ¶²Æ1
-w
-java:S1104"[Make escalaAnsiedade a static final constant or non-public and provide accessors if needed.(èÕÀ^8Ÿ¶²Æ1
-…
-java:S1104"cMake pontuacaoTotalDepressao a static final constant or non-public and provide accessors if needed.(¯‹åøÿÿÿÿ8Ÿ¶²Æ1
-x
-java:S1104"[Make escalaDepressao a static final constant or non-public and provide accessors if needed.(ô¤Ã–8ƒ†Ÿ²Æ1
-„
-java:S1104"bMake pontuacaoTotalEstresse a static final constant or non-public and provide accessors if needed.(™½àûÿÿÿÿ8ƒ†Ÿ²Æ1
-w
-java:S1104"ZMake escalaEstresse a static final constant or non-public and provide accessors if needed.(ñ¸¡¯8ƒ†Ÿ²Æ1

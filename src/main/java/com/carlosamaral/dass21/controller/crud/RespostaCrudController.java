@@ -42,9 +42,13 @@ public class RespostaCrudController {
             return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
         }
 
-        RespostaModel respostaModel = this.respostaService.save(resposta);
-        RespostaDetailsDTO response = respostaService.toDetailsDTO(respostaModel);
-        return new ResponseEntity<>(Optional.of(response), HttpStatus.CREATED);
+        try {
+            RespostaModel respostaModel = this.respostaService.save(resposta);
+            RespostaDetailsDTO response = respostaService.toDetailsDTO(respostaModel);
+            return new ResponseEntity<>(Optional.of(response), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
+        }
     }
 
     @PutMapping("/update")

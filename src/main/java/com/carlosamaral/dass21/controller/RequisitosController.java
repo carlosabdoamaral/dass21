@@ -4,6 +4,7 @@ import com.carlosamaral.dass21.controller.crud.RespostaCrudController;
 import com.carlosamaral.dass21.dto.RespostaDetailsDTO;
 import com.carlosamaral.dass21.dto.SaveRespostaDTO;
 import com.carlosamaral.dass21.dto.UpdateRespostaAndParticipanteDTO;
+import com.carlosamaral.dass21.model.RespostaModel;
 import com.carlosamaral.dass21.service.RequisitosService;
 import com.carlosamaral.dass21.service.RespostaService;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,17 @@ public class RequisitosController {
 
     @PostMapping("/e4")
     public ResponseEntity<Optional<RespostaDetailsDTO>> etapa4(@RequestBody SaveRespostaDTO resposta) {
-        return this.respostaCrudController.save(resposta);
+        try {
+            if (!respostaService.respostaIsValid(resposta)) {
+                return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
+            }
+
+            RespostaModel respostaModel = this.respostaService.save(resposta);
+            RespostaDetailsDTO response = respostaService.toDetailsDTO(respostaModel);
+            return new ResponseEntity<>(Optional.of(response), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
+        }
     }
 
     @GetMapping("/e5")
@@ -42,13 +53,22 @@ public class RequisitosController {
 
     @PutMapping("/e6")
     public ResponseEntity<Optional<UpdateRespostaAndParticipanteDTO>> etapa6(@RequestBody UpdateRespostaAndParticipanteDTO req) {
-        var res = requisitosService.updateRespostaAndParticipante(req);
-        if (res.isEmpty()) return new ResponseEntity<>(Optional.empty(), HttpStatus.INTERNAL_SERVER_ERROR);
-        else return new ResponseEntity<>(res, HttpStatus.OK);
+        try {
+            var res = requisitosService.updateRespostaAndParticipante(req);
+            if (res.isEmpty()) return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(res, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(Optional.empty(), HttpStatus.BAD_REQUEST);
+        }
     }
 
     @GetMapping("/e7/{id}")
     public ResponseEntity<List<RespostaDetailsDTO>> etapa7(@PathVariable Long id) {
-        return new ResponseEntity<>(respostaService.findByParticipanteId(id), HttpStatus.OK);
+        try {
+            var res = respostaService.findByParticipanteId(id);
+            return new ResponseEntity<>(res, HttpStatus.OK);
+        }  catch (Exception e) {
+            return new ResponseEntity<>(List.of(), HttpStatus.BAD_REQUEST);
+        }
     }
 }

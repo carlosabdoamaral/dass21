@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JpaBuddyIdeaProjectConfig">
-    <option name="defaultUnitInitialized" value="true" />
-    <option name="renamerInitialized" value="true" />
-    <option name="reverseEngineeringLastDbConnectionId" value="90428105-e457-4d8e-babd-82ab2f2e3d26" />
-    <option name="reLastEntityCreationPackage" value="src/main/java/com/carlosamaral/dass21/model" />
-  </component>
-</project>
